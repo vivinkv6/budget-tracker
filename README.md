@@ -5,8 +5,8 @@ Many people in India live on a fixed income, and they find that towards the end 
 
 ## Technologies Used
 
-React js - ^18.1.0
-React Bootstrap - ^2.4.0
+React js - ^18.1.0<br>
+React Bootstrap - ^2.4.0<br>
 react-router-dom - ^6.3.0
 
 In the project directory, you can run:

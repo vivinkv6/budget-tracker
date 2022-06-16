@@ -1,7 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-function Balance() {
-    const [balance, setBalance] = useState(2000);
+function Balance({balance}) {
     //change color of balance amount
     let colours="";
     if(balance>0){

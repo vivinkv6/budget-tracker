@@ -32,7 +32,7 @@ function Transactions({getIncomeExpense}) {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label><h4>Amount</h4></Form.Label>
+        <Form.Label><h4>Amount</h4><p>(+ve ->income, -ve ->expense)</p></Form.Label>
         <Form.Control type="text" placeholder="Enter Amount" value={amount} onChange={(e)=>setAmount(e.target.value)} required/>
         {alert && <p style={{color:'red'}}>Please Enter valid</p>}
       </Form.Group>

@@ -2,7 +2,7 @@
 
 An Expense Tracker is a web application that help you to keep an accurate record of your Money Inflow and Outflow.
 Many people in India live on a fixed income, and they find that towards the end of the month they don’t have sufficient money to meet their needs.
-This web application will help you to track your income and expense and alse display if the balance amount is revenue or expenditure.
+This web application will help you to track your income and expense and also display the balance amount.
 
 ## Technologies Used
 

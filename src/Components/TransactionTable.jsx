@@ -1,10 +1,12 @@
 import React from 'react'
 import Table from 'react-bootstrap/Table';
-function TransactionTable() {
+function TransactionTable({ transaction }) {
+  console.log(transaction);
+  
   return (
 
-  
-       <Table striped bordered hover="sm" style={{marginTop:'40px'}}>
+
+    <Table striped bordered hover="sm" style={{ marginTop: '40px' }}>
       <thead>
         <tr>
           <th>Date</th>
@@ -13,15 +15,20 @@ function TransactionTable() {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>hai</td>
-        </tr>
+        {transaction.map((value,index) => {
+          return (
+            <tr key={index}>
+              <td>{index+1}</td>
+              <td>{value.item}</td>
+              <td>{value.amount}</td>
+            </tr>
+          )
+        })}
+
       </tbody>
     </Table>
-   
-   
+
+
   )
 }
 

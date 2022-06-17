@@ -2,11 +2,11 @@ import React, { useState } from 'react'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 
-function Transactions({getIncomeExpense}) {
+function Transactions({getIncomeExpense,getData}) {
     const[amount,setAmount]=useState("");
     const[items,setItems]=useState("");
     const[alert,setAlert]=useState(false);
-
+let date;
     const onsubmit=(e)=>{
         e.preventDefault();
        if(isNaN(amount)|| !isNaN(items)){
@@ -14,11 +14,15 @@ function Transactions({getIncomeExpense}) {
        }
        else{
         setAlert(false);
-        let date=new Date();
+         date=new Date();
         date.getDate();
-        getIncomeExpense(amount,date);
+
+        getIncomeExpense(amount);
         setAmount('');
         setItems('');
+        getData(items,amount);
+        
+     
        }
     }
   return (
@@ -32,7 +36,7 @@ function Transactions({getIncomeExpense}) {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label><h4>Amount</h4><p>(+ve ->income, -ve ->expense)</p></Form.Label>
+        <Form.Label><h4>Amount</h4><p>(+ve -&gt;income, -ve -&gt;expense)</p></Form.Label>
         <Form.Control type="text" placeholder="Enter Amount" value={amount} onChange={(e)=>setAmount(e.target.value)} required/>
         {alert && <p style={{color:'red'}}>Please Enter valid</p>}
       </Form.Group>

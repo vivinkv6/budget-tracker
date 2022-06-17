@@ -15,7 +15,7 @@ function Navbars() {
                     </Nav>
                     <Nav>
                         <Link to='/' style={{ color: 'white', textDecoration: 'none', marginRight: '10px' }}><h5>Home</h5></Link>
-                        <Link to='/record' style={{ color: 'white', textDecoration: 'none' }}><h5>Records</h5></Link>
+                       
                     </Nav>
                 </Navbar.Collapse>
             </Container>

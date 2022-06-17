@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
 function IncomeExpense({incomes,expenses,getBalance}) {
 
     const sumIncome =incomes.reduce((total,value)=>total+=Number(value),0);
     const sumExpense =expenses.reduce((total,value)=>total+=Number(value),0);
-
-    getBalance(sumIncome,sumExpense)
+    useEffect(()=>{
+        getBalance(sumIncome,sumExpense);
+    },[sumIncome,sumExpense])
+   
+  
     
    
 

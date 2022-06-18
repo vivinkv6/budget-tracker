@@ -6,7 +6,7 @@ function Transactions({getIncomeExpense,getData}) {
     const[amount,setAmount]=useState("");
     const[items,setItems]=useState("");
     const[alert,setAlert]=useState(false);
-let date;
+
     const onsubmit=(e)=>{
         e.preventDefault();
        if(isNaN(amount)|| !isNaN(items)){
@@ -14,13 +14,11 @@ let date;
        }
        else{
         setAlert(false);
-         date=new Date();
-        date.getDate();
 
         getIncomeExpense(amount);
         setAmount('');
         setItems('');
-        getData(items,amount);
+        getData(items,Number(amount));
         
      
        }
@@ -40,7 +38,7 @@ let date;
         <Form.Control type="text" placeholder="Enter Amount" value={amount} onChange={(e)=>setAmount(e.target.value)} required/>
         {alert && <p style={{color:'red'}}>Please Enter valid</p>}
       </Form.Group>
-      <Button type="submit">Add Transactions</Button>
+      <Button type="submit" className='mb-5'>Add Transactions</Button>
      </form>
     </div>
   )

@@ -6,9 +6,23 @@ import { Link } from 'react-router-dom';
 
 function Navbars() {
     return (
+<>
+
         <Navbar collapseOnSelect expand="lg" bg="primary" variant="dark">
             <Container>
+
+            <Navbar.Brand href="#home">
+            <img
+              src='https://images-na.ssl-images-amazon.com/images/I/41gQ5nc9yEL.png'
+              width="80"
+              height="70"
+              className="d-inline-block align-top "
+              alt="React Bootstrap logo"
+            />
+          </Navbar.Brand>
+
             <Navbar.Brand ><h2>Expense Tracker</h2></Navbar.Brand>
+
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
@@ -20,6 +34,7 @@ function Navbars() {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
+        </>
     );
 }
 

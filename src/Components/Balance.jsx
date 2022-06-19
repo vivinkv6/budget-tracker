@@ -12,7 +12,7 @@ function Balance({balance}) {
     return (
         <>
             <h1 style={{ fontWeight: '700',marginTop:'30px'}}>Your Balance</h1>
-            <h2 style={{fontWeight: '700',color:`${colours}`}}>Rs.{balance}</h2>
+            <h2 style={{fontWeight: '700',color:colours}}>Rs.{balance}</h2>
 
         </>
     )

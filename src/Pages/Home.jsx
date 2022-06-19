@@ -12,10 +12,11 @@ function Home() {
   const [expenses, setExpenses] = useState([0]);
   const [balance, setBalance] = useState(0);
   const [transaction, setTransaction] = useState([]);
-  const getData = (items, amounts) => {
+  const getData = (items, amounts,time) => {
     const data = {
       item: items,
-      amount: Number(amounts)
+      amount: Number(amounts),
+      date:time
     };
     setTransaction([...transaction, data]);
   }
@@ -69,7 +70,7 @@ function Home() {
             <TransactionTable transaction={transaction} />
           </div>
           :
-          <h2 className='mb-2'>No more Records</h2>
+          <h2 className='mb-2 text-center'>No more Records</h2>
         }
       </div>
     </div>

@@ -4,12 +4,7 @@ import{BrowserRouter,Routes,Route} from 'react-router-dom';
 import NotFound from './Pages/NotFound';
 
 
-
-
 function App() {
-  
- 
-
 
   return (
     <BrowserRouter>

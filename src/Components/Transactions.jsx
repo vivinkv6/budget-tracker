@@ -13,12 +13,14 @@ function Transactions({getIncomeExpense,getData}) {
        setAlert(true);
        }
        else{
+        let date=new Date();
+        let dates=date.getHours()+":"+date.getMinutes()+":"+date.getSeconds();
         setAlert(false);
 
         getIncomeExpense(amount);
         setAmount('');
         setItems('');
-        getData(items,Number(amount));
+        getData(items,Number(amount),dates);
         
      
        }
@@ -34,7 +36,7 @@ function Transactions({getIncomeExpense,getData}) {
       </Form.Group>
 
       <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label><h4>Amount</h4><p>(+ve -&gt;income, -ve -&gt;expense)</p></Form.Label>
+        <Form.Label><h4>Amount</h4><p>(+ve = income, -ve = expense)</p></Form.Label>
         <Form.Control type="text" placeholder="Enter Amount" value={amount} onChange={(e)=>setAmount(e.target.value)} required/>
         {alert && <p style={{color:'red'}}>Please Enter valid</p>}
       </Form.Group>

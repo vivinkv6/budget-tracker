@@ -1,4 +1,9 @@
 # Expense Tracker
+![Screenshot (209)](https://user-images.githubusercontent.com/102971812/174486235-33f6cc16-bb4f-4747-937c-f9be9edf551b.png)
+
+
+![Screenshot (208)](https://user-images.githubusercontent.com/102971812/174486171-c609103a-51e9-43e1-a799-cfd518431bb7.png)
+
 
 An Expense Tracker is a web application that help you to keep an accurate record of your Money Inflow and Outflow.
 Many people in India live on a fixed income, and they find that towards the end of the month they don’t have sufficient money to meet their needs.
@@ -8,7 +13,6 @@ This web application will help you to track your income and expense and also dis
 
 React js - ^18.1.0<br>
 React Bootstrap - ^2.4.0<br>
-react-router-dom - ^6.3.0
 
 In the project directory, you can run:
 

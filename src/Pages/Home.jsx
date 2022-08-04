@@ -54,7 +54,7 @@ function Home() {
 
   return (
     <div className='container'>
-      <h1 align="center">Expense Tracker</h1>
+      <h1 align="center">Budget Tracker</h1>
       <div className='row'>
         <div className="col-sm-6 text-center">
           <Balance balance={balance} />

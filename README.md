@@ -16,7 +16,7 @@ In the project directory, you can run:
 
 ## Website Link
 
-https://expense-tracker-lyart-beta.vercel.app/
+https://budget-tracker-lyart-beta.vercel.app/
 
 
 ### `npm start`
